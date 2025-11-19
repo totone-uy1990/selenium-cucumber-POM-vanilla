@@ -1,0 +1,7 @@
+<configuration>
+    <theme>DARK</theme>
+    <encoding>UTF-8</encoding>
+    <protocol>HTTPS</protocol>
+    <documentTitle>Reporte de Automatización</documentTitle>
+    <reportName>Resultados de Pruebas</reportName>
+</configuration>
