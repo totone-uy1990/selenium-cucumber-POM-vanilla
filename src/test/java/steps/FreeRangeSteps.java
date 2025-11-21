@@ -12,9 +12,9 @@ public class FreeRangeSteps extends PaginaPrincipal {
         landingPage.navigateToFreeRange();
     }
 
-    @When("I go to a section using the navigation bar")
-    public void navigationBarUser() {
-        landingPage.clicklOnSectionNavigationBar();
+    @When("I go to {word} using the navigation bar")
+    public void navigationBarUser(String section) {
+        landingPage.clicklOnSectionNavigationBar(section);
     }
 
 

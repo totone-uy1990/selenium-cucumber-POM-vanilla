@@ -3,8 +3,9 @@ package pages;
 import org.openqa.selenium.WebElement;
 
 public class PaginaPrincipal extends BasePage {
-
-    String sectionLinkRecursos ="nav li a[href*=\"recursos\"]";//css
+    //usamos string format (%s)
+    //String sectionLink = "nav li a[href*=\"%s\"]"; //css
+    String sectionLink = "//a[normalize-space()='%s' and @href]";
 
     //Generals
     public void navigateToFreeRange() {
@@ -12,8 +13,9 @@ public class PaginaPrincipal extends BasePage {
     }
 
 
-    public void clicklOnSectionNavigationBar() {
-        clickElement(sectionLinkRecursos);
+    public void clicklOnSectionNavigationBar(String section) {
+        String xpathSection = String.format(sectionLink, section);
+        clickElement(xpathSection);
     }
 
 
