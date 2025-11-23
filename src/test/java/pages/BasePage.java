@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BasePage {
-    protected static  WebDriver driver;
+    protected static WebDriver driver;
     private static ChromeOptions options;
 
     //WebDriverWait genera una espera pero devuelve un Webdriver con esa espera
@@ -66,7 +66,8 @@ public class BasePage {
         find(locator).clear();
         find(locator).sendKeys(keysToSend);
     }
-                       //DROPDOWNS
+
+    //DROPDOWNS
     //by value
     public void selectFromDropdownByValue(String locator, String value) {
         Select dropdown = new Select(find(locator));
@@ -79,12 +80,19 @@ public class BasePage {
         Select dropdown = new Select(find(locator));
         dropdown.selectByIndex(Index);
     }
+
     //pick Size
     public int dropdownSize(String locator) {
         Select dropdown = new Select(find(locator));
         List<WebElement> dropdownelements = dropdown.getOptions();
         return dropdownelements.size();
     }
+
+    public void selectFromDropDown(String locator, String text) {
+        Select dropdown = new Select(find(locator));
+        dropdown.selectByVisibleText(text);
+    }
+
 }
 
 

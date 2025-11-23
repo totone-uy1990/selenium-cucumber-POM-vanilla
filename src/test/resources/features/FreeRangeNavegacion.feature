@@ -15,4 +15,6 @@ Feature: Navigation bar
     Given I navigate to www.freerangetesters.com
     When I go to Cursos using the navigation bar
     And select Introducción al Testing
-    Then
+
+
+    Scenario:

@@ -9,7 +9,6 @@ public class FreeRangeSteps {
 
     PaginaPrincipal landingPage = new PaginaPrincipal();
     PaginaCursos cursosPage = new PaginaCursos();
-    PaginaFundamentosTesting fundamentosPage = new PaginaFundamentosTesting();
 
     @Given("I navigate to www.freerangetesters.com")
     public void InavifateToFRT() {
