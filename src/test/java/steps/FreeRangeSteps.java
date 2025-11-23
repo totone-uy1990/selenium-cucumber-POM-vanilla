@@ -1,11 +1,15 @@
 package steps;
 
 import io.cucumber.java.en.*;
+import pages.PaginaCursos;
+import pages.PaginaFundamentosTesting;
 import pages.PaginaPrincipal;
 
-public class FreeRangeSteps extends PaginaPrincipal {
+public class FreeRangeSteps {
 
     PaginaPrincipal landingPage = new PaginaPrincipal();
+    PaginaCursos cursosPage = new PaginaCursos();
+    PaginaFundamentosTesting fundamentosPage = new PaginaFundamentosTesting();
 
     @Given("I navigate to www.freerangetesters.com")
     public void InavifateToFRT() {
@@ -17,5 +21,8 @@ public class FreeRangeSteps extends PaginaPrincipal {
         landingPage.clicklOnSectionNavigationBar(section);
     }
 
-
+    @And("select Introducción al Testing")
+    public void navigateToIntro() {
+        cursosPage.clickOnFundamentosDelTestingLink();
+       }
 }

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 public class PaginaPrincipal extends BasePage {
     //usamos string format (%s)
     //String sectionLink = "nav li a[href*=\"%s\"]"; //css
-    String sectionLink = "//a[normalize-space()='%s' and @href]";
+   private String sectionLink = "//a[normalize-space()='%s' and @href]";
 
     //Generals
     public void navigateToFreeRange() {
